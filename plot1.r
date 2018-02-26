@@ -23,6 +23,9 @@
 # V8	Sub_metering_2
 # V9	Sub_metering_3
 
+#Download the dataset:
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", "DATA.zip")
+
 #Read and subset the required data
 ds <- read.table("household_power_consumption.txt", colClasses = c("character", "character", rep("numeric", 7)), skip = 1, sep = ';', na.strings = '?')
 reqDate <- (ds$V1 == "1/2/2007") | (ds$V1 == "2/2/2007")
